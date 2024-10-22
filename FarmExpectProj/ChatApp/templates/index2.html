@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <style>
+        /* Basic styling can be added here */
+    </style>
+</head>
+<body>
+    <h1> Hello enter your input</h1>
+<form method="POST" > {% comment%}  "action="{% url 'chatBot' %} {% endcomment %} 
+
+{% csrf_token %}
+
+<input type="text" class="form-control" name="user_input">
+
+<button type="submit" class="btn btn-primary mt-3">Send</button>
+
+</form>
+  {% if response %}
+  {{ response }} 
+  {% endif %}
+    <script>
+        // Your JavaScript code can be added here
+    </script>
+</body>
+</html>
